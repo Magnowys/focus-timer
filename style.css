@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-color:#FFFFFF;
+    --bg-button-on:#02799D;
+    --bg-button-off: #E1E1E6;
+    --text-color: #323238;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    width: 100vw;
+    height: 100vh;
+}
+
+#app {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 19rem 22rem;
+    gap: 4rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 6rem;
+}
+
+.running .ph-play-circle, 
+.running .ph-timer, 
+html:not(.running) .ph-pause-circle, 
+html:not(.running) .ph-stop-circle {
+    display: none;
+}
+
+#timer {
+    font-size: 12.6rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+#controls {
+    display: flex;
+    gap: 4.0rem;
+}
+
+.sound {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+}
+
+.sound .select path:nth-child(1) {
+    fill: #02799D;
+}
+.sound .select path:nth-child(2) {
+    fill: white;
+}
+
